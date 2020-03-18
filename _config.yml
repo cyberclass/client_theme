@@ -1,0 +1,62 @@
+site: Colorie
+url:
+author: Colorie
+author:
+  name: Colorie
+  email:
+  url:
+  avatar:
+title: CyberClass
+description: Simple Jekyll theme for CyberClass clients
+logo:
+image:
+
+permalink: pretty
+
+baseurl:             ""
+
+include:
+  - _redirects
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+plugins:
+  - jekyll-paginate
+
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:slug
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
